@@ -1,7 +1,7 @@
 ;;; personal.el --- Prelude personal customizations
 
 ;; Load ELPA packages
-(prelude-require-packages '(ag ruby-hash-syntax rspec-mode bundler))
+(prelude-require-packages '(ag ruby-hash-syntax rspec-mode bundler aggressive-indent))
 
 ;; Show line numbers in left margin
 (global-linum-mode)
@@ -39,3 +39,6 @@
             (beginning-of-buffer)
             (insert (concat (magit-get-current-branch) " "))
             (end-of-line)))
+
+;; Enable aggressive indent for all modes
+(global-aggressive-indent-mode 1)
